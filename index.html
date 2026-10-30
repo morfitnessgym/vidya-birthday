@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff0f6"><title>A little surprise for Vidya 💌</title>
+<style>
+:root{--rose:#c43d78;--pink:#ff7eae;--ink:#4b2a3e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff7fb;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:34px 18px;background:radial-gradient(circle at 15% 15%,#ffe0ed,transparent 35%),radial-gradient(circle at 90% 85%,#e9dcff,transparent 33%),linear-gradient(140deg,#fff9fc,#ffeaf3)}
+.hero-inner{max-width:740px}.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.22em;font-weight:800;color:#b04b7b}
+h1{font:700 clamp(3.1rem,10vw,6.5rem)/.98 Georgia,serif;color:var(--rose);margin:18px 0;text-shadow:0 3px #fff}
+.hero p{font-size:clamp(1rem,3vw,1.2rem);line-height:1.8;max-width:590px;margin:0 auto 25px}
+.heart{display:inline-block;font-size:2.5rem;animation:pulse 1.4s infinite}
+button.primary{border:0;border-radius:999px;padding:14px 24px;color:white;background:linear-gradient(100deg,#ff679f,#c65bd2);font-weight:800;box-shadow:0 12px 28px #c64c912e}
+.mini{font-size:.85rem;opacity:.7;margin-top:14px}
+section{padding:64px 16px;max-width:1050px;margin:auto}.title{font:700 clamp(2rem,6vw,3.3rem)/1.1 Georgia,serif;text-align:center;color:var(--rose);margin:0 0 12px}
+.sub{text-align:center;line-height:1.7;max-width:650px;margin:0 auto 28px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.photo{margin:0;background:white;padding:8px 8px 16px;border-radius:10px;box-shadow:0 10px 25px #67304b18;transform:rotate(var(--tilt))}
+.photo img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;border-radius:5px;background:#fff5fa}
+.photo figcaption{font:italic 1rem Georgia,serif;text-align:center;padding-top:11px;color:#9f4a73}
+.letter{max-width:780px;margin:auto;background:linear-gradient(160deg,#fffdfd,#fff1f7);border:1px solid #f7d4e3;border-radius:22px;padding:clamp(22px,5vw,42px)}
+.letter-text{font:clamp(1.08rem,2.8vw,1.28rem)/1.9 Georgia,serif;text-align:center}
+.sign{font-weight:800;color:var(--rose);text-align:center;margin-top:20px}
+.videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.videocard{background:#fff;border:1px solid #f6d7e5;border-radius:18px;padding:10px;box-shadow:0 12px 35px #9f477214}
+video{width:100%;height:auto;max-height:72vh;object-fit:contain;display:block;background:#150d13;border-radius:12px}
+.videocard p{text-align:center;margin:10px 0 3px;font-weight:700;color:#a04474}
+.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+button.secondary{border:1px solid #f0c5d9;border-radius:999px;background:#fff;color:#a53e72;padding:12px 18px;font-weight:700}
+.final{min-height:250px;text-align:center;background:linear-gradient(135deg,#fff0f6,#f2eaff);border-radius:30px;padding:30px;display:grid;place-items:center}
+.final h2{font:700 clamp(2rem,6vw,3.5rem) Georgia,serif;color:var(--rose);margin:10px}
+footer{text-align:center;padding:28px 14px 45px;color:#a25a7d;font-size:.92rem}.hidden{display:none!important}
+.float{position:fixed;top:-35px;z-index:20;pointer-events:none;animation:fall linear forwards}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.08}}
+@media(max-width:600px){section{padding:48px 13px}.gallery,.videos{grid-template-columns:1fr;max-width:480px;margin:auto}.photo img{max-height:none}}
+
+.cake-card{max-width:800px;margin:auto;text-align:center;background:linear-gradient(145deg,#fff,#fff0f7);border:1px solid #f7cddd;border-radius:28px;padding:clamp(20px,4vw,38px);box-shadow:0 18px 50px #a9437618}
+.cake-kicker{color:#b34b7b;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800}
+.cake-stage{position:relative;width:min(420px,100%);height:300px;margin:14px auto 18px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.cake-plate{position:absolute;bottom:26px;width:88%;height:25px;background:linear-gradient(#fff,#e8d5e1);border-radius:50%;box-shadow:0 8px 10px #6f29451c}
+.cake-body{position:absolute;bottom:47px;width:68%;height:126px;border-radius:15px 15px 24px 24px;background:linear-gradient(90deg,#f7a9c9,#ffcee0 30%,#f08db8 70%,#d95f9c);box-shadow:inset 0 -12px #d65d98,inset 0 8px #fff1f7;transition:transform .8s}
+.icing{position:absolute;top:-9px;left:0;width:100%;height:30px;border-radius:50%;background:#fff8fc;box-shadow:0 5px #f8c4da}
+.icing:after{content:"";position:absolute;top:12px;left:10%;width:15px;height:24px;background:#fff8fc;border-radius:0 0 12px 12px;box-shadow:52px 3px #fff8fc,105px -1px #fff8fc,165px 4px #fff8fc,220px -2px #fff8fc}
+.cake-decoration{position:absolute;top:57px;width:100%;color:#fff6fb;font-size:17px;letter-spacing:2px}
+.cake-top{position:absolute;bottom:164px;width:68%;height:55px;border-radius:50%;background:radial-gradient(ellipse at 50% 35%,#fff8fc,#ffbdd7 65%,#e97eae);border:2px solid #f4a7c9;z-index:2;display:grid;place-items:center;color:#b72d70;font:italic 28px Georgia,serif}
+.berry{position:absolute;width:13px;height:13px;border-radius:50%;background:#c92f60;box-shadow:inset -3px -2px #8e2148}
+.b1{top:12px;left:24%}.b2{top:26px;right:24%}.b3{top:8px;right:38%}
+.cake-candle{position:absolute;bottom:211px;left:49%;width:10px;height:40px;background:repeating-linear-gradient(45deg,#fff 0 5px,#ff78ad 5px 9px);z-index:4;border-radius:4px}
+.flame{position:absolute;top:-19px;left:-3px;width:16px;height:22px;background:radial-gradient(ellipse at 50% 70%,#fff9a5 0 20%,#ffb42e 45%,#ff6d58 70%);border-radius:60% 40% 60% 40%;transform:rotate(8deg);animation:flicker .5s infinite alternate}
+.knife{position:absolute;right:10%;bottom:155px;font-size:45px;transform:rotate(-38deg);z-index:8;opacity:0;filter:drop-shadow(0 4px 2px #6a284522)}
+.cake-slice{position:absolute;bottom:51px;left:52%;width:0;height:0;border-left:0 solid transparent;border-right:0 solid transparent;border-bottom:0 solid #ffb7d2;z-index:5;transition:all .8s ease}
+.sprinkles{position:absolute;top:20px;color:#f4a1c4;font-size:20px;opacity:.7}
+.cake-stage.cut .knife{animation:cutMotion .9s ease-in-out forwards}
+.cake-stage.cut .cake-slice{width:100px;height:105px;left:61%;bottom:51px;border-left:50px solid transparent;border-right:0 solid transparent;border-bottom:105px solid #f7a4c8;transform:translate(24px,4px) rotate(12deg);filter:drop-shadow(0 5px 2px #a3436b22)}
+.cake-stage.cut .cake-body{transform:translateX(-8px)}
+.birthday-reveal{margin:22px auto 0;padding:22px 14px;border-radius:22px;background:#fff;border:1px solid #f5c5d9;animation:popIn .65s ease both}
+.birthday-reveal h3{font:800 clamp(1.8rem,6vw,3.2rem) Georgia,serif;color:#c43d78;margin:8px 0;text-shadow:0 2px #ffe4ef}
+.birthday-reveal p{line-height:1.7}.big-balloons{font-size:2rem}.birthday-speech{font-weight:800;color:#b23c78;margin:12px 0}
+.cake-note{font-size:.86rem;color:#8b6077;margin:14px auto 0}
+@keyframes cutMotion{0%{opacity:0;right:10%;bottom:155px}20%{opacity:1}70%{right:36%;bottom:93px;transform:rotate(8deg)}100%{opacity:0;right:36%;bottom:93px;transform:rotate(8deg)}}
+@keyframes flicker{to{transform:rotate(-8deg) scale(.9)}}
+@keyframes popIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+
+
+.cake-photo-caption{font-size:.9rem;bottom:3%;padding:7px 12px}.real-cake-image{max-height:none}}
+
+.continuous-float{pointer-events:none;z-index:99;position:fixed;top:-35px;}
+
+.continuous-float{
+  position:fixed !important;
+  top:-40px !important;
+  z-index:9999 !important;
+  pointer-events:none !important;
+  display:block !important;
+  line-height:1 !important;
+  animation:continuousFall linear forwards !important;
+  will-change:transform,opacity;
+}
+@keyframes continuousFall{
+  0%{transform:translate3d(0,-5vh,0) rotate(0deg);opacity:0}
+  8%{opacity:.95}
+  100%{transform:translate3d(24px,115vh,0) rotate(360deg);opacity:0}
+}
+
+
+.birthday-music-box{display:flex;flex-direction:column;align-items:center;gap:8px;margin:18px auto 4px}
+#birthdayMusicBtn{cursor:pointer;border:0;border-radius:999px;padding:14px 24px;font-weight:700;box-shadow:0 10px 26px #d64b9340;transition:transform .2s,filter .2s}
+#birthdayMusicBtn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+#birthdayMusicStatus{margin:0;text-align:center;font-size:.92rem}
+
+</style></head>
+<body>
+<header class="hero"><div class="hero-inner">
+<div class="heart">💗</div><div class="kicker">A little page, made with extra care</div>
+<h1>Happy Birthday,<br>Vidya! 🎂</h1>
+<p>I could have just sent a message… but that felt too ordinary for today. So here’s a tiny surprise made just for you. 🥹✨</p>
+<button class="primary" id="openBtn">Open your little surprise 💌</button>
+<div class="mini">Best viewed with a smile. Cake is optional, but highly recommended. 🍰</div>
+</div></header>
+<main id="surprise" class="hidden">
+<section><h2 class="title">Your little photo scrapbook 📸</h2>
+<p class="sub">Picked a few favourite looks and travel moments from the screenshots you shared — each one deserves a little frame. 💕</p>
+<div class="gallery">
+<figure class="photo" style="--tilt:-1deg"><img src="assets/insta_photo1.jpg" alt="Vidya in a pink saree"><figcaption>Birthday star energy ✨</figcaption></figure>
+<figure class="photo" style="--tilt:1.2deg"><img src="assets/insta_photo2.jpg" alt="Vidya on a trip"><figcaption>Main character moment 🌸</figcaption></figure>
+<figure class="photo" style="--tilt:.8deg"><img src="assets/insta_photo3.jpg" alt="Vidya selfie"><figcaption>Cool girl energy 😎</figcaption></figure>
+<figure class="photo" style="--tilt:-1.1deg"><img src="assets/insta_photo4.jpg" alt="Vidya in snowy mountains"><figcaption>White beauty of nature ❄️</figcaption></figure>
+<figure class="photo" style="--tilt:1deg"><img src="assets/insta_photo5.jpg" alt="Vidya in a red outfit"><figcaption>Lights, camera, Vidya ❤️</figcaption></figure>
+<figure class="photo" style="--tilt:-.8deg"><img src="assets/insta_photo6.jpg" alt="Vidya in a blue saree"><figcaption>Elegance mode: ON 💙</figcaption></figure>
+<figure class="photo" style="--tilt:.6deg"><img src="assets/insta_photo7.jpg" alt="Vidya at an evening event"><figcaption>One more lovely memory ✨</figcaption></figure>
+<figure class="photo" style="--tilt:-.7deg"><img src="assets/insta_photo8.jpg" alt="Vidya in a blue traditional outfit"><figcaption>Traditional look, total wow 💙</figcaption></figure>
+</div></section>
+<section><h2 class="title">A note just for you 💌</h2><p class="sub">A birthday note with your name on it — not just another forwarded message. 😉</p>
+<div class="letter"><div class="letter-text">
+Dear Vidya,<br><br>
+Happy Birthday to the girl who deserves extra cake, extra happiness, and absolutely no boring days! 🥳💖<br><br>
+May your life be full of lovely surprises, good people, big laughs, delicious food, perfect pictures, and dreams that actually come true — unlike “I’ll sleep early tonight.” 😂<br><br>
+Keep being your fun, lovely self. I hope this new year brings you so many reasons to smile that your cheeks need a holiday. 🌷<br><br>
+And remember: age is just a number… a number we will politely refuse to discuss. 🤫🎂<br><br>
+Have the happiest birthday, Vidya. You deserve all the good things coming your way. 💕
+</div><div class="sign">With warm wishes,<br>Your special friend 💗</div></div></section>
+
+<section><h2 class="title">Vidya's video memories 🎬</h2>
+<p class="sub">Two little video memories, added just for you. Tap play to watch them. 💗</p>
+<div class="videos">
+  <div class="videocard"><video controls playsinline preload="metadata"><source src="assets/vidya_video_1.mp4" type="video/mp4"></video><p>A little memory 💗</p></div>
+  <div class="videocard"><video controls playsinline preload="metadata"><source src="assets/vidya_video_2.mp4" type="video/mp4"></video><p>Another lovely moment ✨</p></div>
+</div>
+
+</section>
+<section><div class="final"><div><div class="heart">🎉💗🎉</div><h2>Stay cute. Stay chaotic. Stay you!</h2>
+<p class="sub">Here’s to more laughter, more memories, and a year that treats you wonderfully. Happy Birthday once again, Vidya! 🧁🌷</p>
+<div class="birthday-music-box"><button class="primary" id="birthdayMusicBtn" type="button">🎵 Play “Happy Birthday, Vidya!” 💖</button><p class="sub" id="birthdayMusicStatus">A little birthday melody, just for you ✨</p></div></div></div></section>
+
+
+
+
+</main><footer>Thoughtfully made for Vidya · From your special friend 💌</footer>
+<script>
+const surprise=document.getElementById('surprise');
+function shower(){const s=['💗','💕','✨','🌸','💖','⭐','🎉','🍰'];for(let i=0;i<42;i++){const e=document.createElement('span');e.className='float';e.textContent=s[Math.floor(Math.random()*s.length)];e.style.left=Math.random()*100+'vw';e.style.animationDuration=(3+Math.random()*4)+'s';e.style.fontSize=(16+Math.random()*19)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),7500)}}
+document.getElementById('openBtn').addEventListener('click',()=>{surprise.classList.remove('hidden');document.getElementById('openBtn').textContent='Surprise opened 💗';document.getElementById('openBtn').disabled=true;shower();setTimeout(()=>surprise.scrollIntoView({behavior:'smooth',block:'start'}),160)});
+const sparkleBtn=document.getElementById('sparkleBtn'); if(sparkleBtn) sparkleBtn.addEventListener('click',shower);
+
+
+
+
+// Continuous gentle birthday sparkles.
+(function(){
+  const symbols = ['✨','💖','💕','🌸','⭐','💗','🎉'];
+  function makeSparkle(){
+    const el = document.createElement('span');
+    el.className = 'continuous-float';
+    el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left = (Math.random()*100) + 'vw';
+    const duration = 5 + Math.random()*5;
+    el.style.animationDuration = duration + 's';
+    el.style.fontSize = (16 + Math.random()*16) + 'px';
+    document.body.appendChild(el);
+    window.setTimeout(()=>el.remove(), duration*1000 + 500);
+  }
+  for(let i=0;i<8;i++) window.setTimeout(makeSparkle, i*350);
+  window.setInterval(makeSparkle, 650);
+})();
+
+// Click-to-play birthday melody using Web Audio.
+(function(){
+  const btn = document.getElementById('birthdayMusicBtn');
+  const status = document.getElementById('birthdayMusicStatus');
+  if (!btn) return;
+  let audioCtx = null, loopTimer = null, playing = false, activeNodes = [];
+  const melody = [
+    [523.25,.26],[523.25,.26],[587.33,.48],[523.25,.48],[698.46,.48],[659.25,.75],
+    [523.25,.26],[523.25,.26],[587.33,.48],[523.25,.48],[783.99,.48],[698.46,.75],
+    [523.25,.26],[523.25,.26],[1046.5,.48],[880,.48],[698.46,.48],[659.25,.48],[587.33,.75],
+    [932.33,.26],[932.33,.26],[880,.48],[698.46,.48],[783.99,.48],[698.46,.9]
+  ];
+  function playSequence(){
+    if(!playing || !audioCtx) return;
+    let t = audioCtx.currentTime + 0.05;
+    melody.forEach(([freq,dur])=>{
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq,t);
+      gain.gain.setValueAtTime(0.0001,t);
+      gain.gain.linearRampToValueAtTime(0.11,t+0.025);
+      gain.gain.setValueAtTime(0.11,t+Math.max(0.04,dur-0.05));
+      gain.gain.linearRampToValueAtTime(0.0001,t+dur);
+      osc.connect(gain); gain.connect(audioCtx.destination);
+      osc.start(t); osc.stop(t+dur+0.03);
+      activeNodes.push(osc);
+      t += dur + 0.07;
+    });
+    const totalMs = melody.reduce((sum,n)=>sum+n[1]+0.07,0)*1000;
+    loopTimer = window.setTimeout(playSequence,totalMs);
+  }
+  async function startMusic(){
+    try{
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if(!AC) throw new Error('Audio not supported');
+      if(!audioCtx) audioCtx = new AC();
+      if(audioCtx.state === 'suspended') await audioCtx.resume();
+      playing = true;
+      btn.textContent = '⏹ Stop birthday music';
+      if(status) status.textContent = '🎶 Happy Birthday, Vidya! Music is playing 💖';
+      playSequence();
+    }catch(err){
+      if(status) status.textContent = 'Sound could not start. Please check device volume and try again.';
+      btn.textContent = '🎵 Tap to play birthday music';
+    }
+  }
+  function stopMusic(){
+    playing = false;
+    if(loopTimer) clearTimeout(loopTimer);
+    activeNodes.forEach(n=>{try{n.stop()}catch(e){}});
+    activeNodes = [];
+    btn.textContent = '🎵 Play “Happy Birthday, Vidya!” 💖';
+    if(status) status.textContent = 'Tap to play the birthday melody again ✨';
+  }
+  btn.addEventListener('click',()=>{ if(playing) stopMusic(); else startMusic(); });
+})();
+</script></body></html>
